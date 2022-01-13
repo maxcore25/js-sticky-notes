@@ -54,11 +54,16 @@ function addNote() {
 }
 
 function updateNote(id, newContent) {
-  console.log('Updating note');
-  console.log(id, newContent);
+  const notes = getNotes();
+  const targetNote = notes.filter(note => note.id == id)[0];
+
+  targetNote.content = newContent;
+  saveNotes(notes);
 }
 
 function deleteNote(id, element) {
-  console.log('Deleting note');
-  console.log(id, element);
+  const notes = getNotes().filter(note => note.id != id);
+
+  saveNotes(notes);
+  notesContainer.removeChild(element);
 }
