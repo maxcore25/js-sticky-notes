@@ -41,13 +41,13 @@ body {
 #app {
   display: grid;
   grid-template-columns: repeat(auto-fill, 200px);
-  padding: 1.5rem;
+  place-content: center;
   gap: 1.5rem;
+  padding: 1.5rem;
 }
 .note {
   height: 200px;
   padding: 1rem;
-
   color: var(--text-clr);
   background: var(--dark-clr);
   border: 1px solid var(--border-clr);
@@ -63,6 +63,7 @@ body {
   box-shadow: 0 0 7px rgba(46, 139, 87, 0.5);
 }
 .add-note {
+  height: 200px;
   font-size: 6rem;
   color: #1c1f29;
   background: var(--dark-clr);
